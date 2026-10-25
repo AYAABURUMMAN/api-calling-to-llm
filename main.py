@@ -6,7 +6,7 @@ load_dotenv()
 
 client = OpenAI(
     api_key=os.getenv("API_KEY"),
-    base_url="https://ai-llm-stg.classera.com/v1",
+    base_url=os.getenv("BASE_URL"),
 )
 
 while True:
