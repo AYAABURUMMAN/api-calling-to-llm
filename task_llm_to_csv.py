@@ -12,7 +12,7 @@ BASE_URL = os.getenv("BASE_URL")
 if not API_KEY or not BASE_URL:
     raise ValueError("API_KEY or BASE_URL not found. Check your .env file.")
 
-URL = f"{BASE_URL.rstrip('/')}/chat/completions"
+URL = BASE_URL
 HEADERS = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 
 # Different inputs to send to the LLM

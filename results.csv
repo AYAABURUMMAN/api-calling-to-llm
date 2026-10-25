@@ -1,4 +1,76 @@
 ﻿question,answer,status
-What is Python?,,error: HTTP 404
-What is a REST API?,,error: HTTP 404
-What is JSON?,,error: HTTP 404
+What is Python?,"Python is a high-level, general-purpose programming language known for its readable syntax and broad range of uses.
+
+It is commonly used for:
+
+- Web development
+- Data analysis and visualization
+- Artificial intelligence and machine learning
+- Automation and scripting
+- Scientific computing
+- Education and software development
+
+Python emphasizes simplicity, so programs can often be written with fewer lines of code than in many other languages. It has a large standard library and a vast ecosystem of third-party packages.
+
+Example:
+
+```python
+print(""Hello, world!"")
+```
+
+This tells Python to display the text `Hello, world!`.",ok
+What is a REST API?,"A **REST API** (Representational State Transfer Application Programming Interface) is a way for software systems to communicate over the web using standard HTTP methods.
+
+It exposes **resources**—such as users, products, or orders—through URLs, and clients interact with those resources using HTTP requests:
+
+- **GET** – retrieve data  
+- **POST** – create a resource  
+- **PUT/PATCH** – update a resource  
+- **DELETE** – remove a resource  
+
+For example:
+
+```http
+GET https://api.example.com/users/42
+```
+
+might return:
+
+```json
+{
+  ""id"": 42,
+  ""name"": ""Ava""
+}
+```
+
+Common REST principles include:
+
+- **Statelessness:** Each request contains all information needed to process it.
+- **Resource-based URLs:** URLs represent things, not actions.
+- **Standard HTTP behavior:** Methods and status codes have consistent meanings.
+- **Representations:** Data is commonly returned as JSON, though other formats are possible.
+
+In short, a REST API is a standardized interface that lets applications access and manipulate data over HTTP.",ok
+What is JSON?,"JSON (JavaScript Object Notation) is a lightweight, text-based format for storing and exchanging structured data. It is commonly used by web APIs and configuration files because it is easy for both humans and computers to read.
+
+Example:
+
+```json
+{
+  ""name"": ""Alice"",
+  ""age"": 30,
+  ""isStudent"": false,
+  ""skills"": [""Python"", ""SQL""]
+}
+```
+
+JSON supports:
+
+- **Objects**: collections of key–value pairs, using `{ }`
+- **Arrays**: ordered lists, using `[ ]`
+- **Strings**: text in double quotes
+- **Numbers**
+- **Booleans**: `true` or `false`
+- **Null**: `null`
+
+Despite its name, JSON can be used with nearly any programming language, not just JavaScript.",ok
