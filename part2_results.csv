@@ -1,0 +1,20 @@
+﻿question,sql,answer,status
+How many students are there in each status?,"SELECT status, COUNT(*) AS student_count
+FROM students
+GROUP BY status;","There are 14 graduated students, 9 withdrawn students, 25 enrolled students, and 2 students on leave.",ok
+Which 3 departments have the most courses?,"SELECT
+    d.id,
+    d.name,
+    d.code,
+    COUNT(c.id) AS course_count
+FROM departments AS d
+LEFT JOIN courses AS c
+    ON c.department_id = d.id
+GROUP BY d.id, d.name, d.code
+ORDER BY course_count DESC, d.id
+LIMIT 3;","The three departments with the most courses are Mechanical Engineering (152), Psychology (63), and Music (57).",ok
+What is the average salary of instructors in each rank?,"SELECT
+    rank,
+    AVG(salary) AS average_salary
+FROM instructors
+GROUP BY rank;","Professors earn an average salary of $80,726.91, lecturers $172,576.07, assistant professors $100,127.49, and associate professors $153,731.16.",ok
