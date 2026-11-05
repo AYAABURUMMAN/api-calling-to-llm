@@ -1,0 +1,3 @@
+﻿question,sql,answer,status
+what number of course ?,"SELECT COUNT(*) AS course_count
+FROM courses;",600 courses.,ok
